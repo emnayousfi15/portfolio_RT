@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAÉ11 - Portfolio RT</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Portfolio
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Présentation</a></li>
+            <li><a href="sae.html">Projets</a></li>
+            <li><a href="#">Bilan de compétences</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <section class="project-header">
+
+        <div class="project-overlay"></div>
+
+        <img src="images/sae11.jpg" alt="SAE11">
+
+        <div class="project-header-content">
+
+            <h1>SAÉ11</h1>
+
+            <p>
+                Sensibilisation à l’hygiène informatique et à la cybersécurité
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENU -->
+
+    <section class="project-content">
+
+        <div class="content-box">
+
+            <h2>Contexte</h2>
+
+            <p>
+                Dans le cadre de cette SAÉ, j’ai travaillé sur la sécurisation d’un accès SSH
+                sur une machine Debian. L’objectif était de comprendre le fonctionnement du
+                protocole SSH ainsi que les différentes méthodes permettant de renforcer
+                la sécurité d’un accès distant.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <h2>Problème rencontré</h2>
+
+            <p>
+                Après avoir modifié le port SSH par défaut afin d’améliorer la sécurité,
+                la connexion distante ne fonctionnait plus et le message
+                <strong>Connection refused</strong> apparaissait.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <h2>Analyse du problème</h2>
+
+            <p>
+                Après analyse, j’ai compris que le client SSH tentait toujours de se connecter
+                sur le port 22 par défaut, alors que le serveur utilisait désormais le port 2222.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <h2>Résolution</h2>
+
+            <p>
+                Pour corriger ce problème, j’ai utilisé l’option <strong>-p</strong>
+                dans la commande SSH afin de préciser manuellement le nouveau port :
+            </p>
+
+            <div class="code-box">
+                ssh -p 2222 utilisateur@adresse_ip
+            </div>
+
+            <p>
+                Il suffit ensuite de saisir le mot de passe de l’utilisateur
+                pour établir la connexion SSH.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+
+            <h2>Compétences acquises</h2>
+
+            <ul>
+
+                <li>Compréhension du protocole SSH</li>
+
+                <li>Configuration d’un serveur OpenSSH</li>
+
+                <li>Gestion des ports réseau</li>
+
+                <li>Sécurisation d’un accès distant</li>
+
+                <li>Analyse et résolution d’erreurs réseau</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
